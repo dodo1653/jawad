@@ -1,5 +1,5 @@
 const Footer = () => {
-  const CA = "81ZjC8zjcTyFkppkPCqdCUi2Xtd99GEbihzpN2k2pump"
+  const CA = "Coming Soon"
 
   return (
     <footer className="py-10 border-t" style={{ borderColor: 'rgba(255,255,255,0.05)' }}>

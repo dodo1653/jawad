@@ -4,7 +4,7 @@ const CTA = () => {
   const [visible, setVisible] = useState(false)
   const ref = useRef(null)
 
-  const CA = "81ZjC8zjcTyFkppkPCqdCUi2Xtd99GEbihzpN2k2pump"
+  const CA = "Coming Soon"
 
   useEffect(() => {
     const observer = new IntersectionObserver(
