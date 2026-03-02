@@ -2,16 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 
 const Token = () => {
   const [visible, setVisible] = useState(false)
-  const [copied, setCopied] = useState(false)
   const ref = useRef(null)
 
   const CA = "Coming Soon"
-
-  const copyCA = () => {
-    navigator.clipboard.writeText(CA)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -96,7 +89,43 @@ const Token = () => {
             className="flex flex-wrap gap-6 transition-all duration-700 ease-out delay-400"
             style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(15px)' : 'translateY(15px)' }}
           >
-            <div className="w-full mb-4">
+            <div className="w-full mb-2">
+              <p className="label mb-3">Verified Transactions</p>
+            </div>
+            <a 
+              href="https://tronscan.org/#/transaction/927f2c2546757018916dc6a2c755cbad9cef0b01706d440fdcde3c2781bec8d3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Transaction 1 →
+            </a>
+            <a 
+              href="https://tronscan.org/#/transaction/3e8d1f3b74dd96b4e557cf57afbfc534575cf69996c4ccc80cd3fab5b9baa9e6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Transaction 2 →
+            </a>
+            <a 
+              href="https://tronscan.org/#/transaction/e041d9461053bfa5c9ed5cd3e32b9a8517d7e6d569751eb5f1ad61bff7b4d46a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Transaction 3 →
+            </a>
+          </div>
+
+          <div 
+            className="flex flex-wrap gap-6 transition-all duration-700 ease-out delay-500"
+            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(15px)' : 'translateY(15px)' }}
+          >
+            <div className="w-full mb-2 mt-4">
               <p className="label mb-3">Proof of Aid Transfer</p>
             </div>
             <a 
