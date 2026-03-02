@@ -22,7 +22,7 @@ const CTA = () => {
   }, [])
 
   return (
-    <section ref={ref} className="py-20 md:py-28" style={{ backgroundColor: 'var(--color-terminal-bg)' }}>
+    <section ref={ref} id="join" className="py-20 md:py-28" style={{ backgroundColor: 'var(--color-terminal-bg)' }}>
       <div className="terminal-container">
         <div 
           className="transition-all duration-700 ease-out mb-12"

@@ -30,7 +30,7 @@ const Support = () => {
   }, [])
 
   return (
-    <section ref={ref} className="py-20 md:py-28" style={{ backgroundColor: 'var(--color-terminal-surface)' }}>
+    <section ref={ref} id="support" className="py-20 md:py-28" style={{ backgroundColor: 'var(--color-terminal-surface)' }}>
       <div className="terminal-container">
         <div 
           className="transition-all duration-700 ease-out mb-12"

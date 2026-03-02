@@ -6,10 +6,12 @@ import Support from './components/Support'
 import Community from './components/Community'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="min-h-screen">
+      <Navbar />
       <Hero />
       <Story />
       <Token />

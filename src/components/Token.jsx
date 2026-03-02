@@ -53,14 +53,7 @@ const Token = () => {
             <div className="mb-4">
               <p className="label mb-2">Contract Address</p>
               <div className="flex items-center gap-4">
-                <p className="text-sm break-all" style={{ color: 'var(--color-text-secondary)' }}>{CA}</p>
-                <button 
-                  onClick={copyCA}
-                  className="text-xs transition-colors hover:text-white"
-                  style={{ color: 'var(--color-text-muted)' }}
-                >
-                  [{copied ? 'copied' : 'copy'}]
-                </button>
+                <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Coming Soon</p>
               </div>
             </div>
           </div>
@@ -85,7 +78,7 @@ const Token = () => {
               </div>
               <div>
                 <p className="label mb-1">Status</p>
-                <p className="text-sm">Active</p>
+                <p className="text-sm">Coming Soon</p>
               </div>
               <div>
                 <p className="label mb-1">Purpose</p>
