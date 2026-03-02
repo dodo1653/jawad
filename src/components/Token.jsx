@@ -123,6 +123,33 @@ const Token = () => {
             >
               Solscan →
             </a>
+            <a 
+              href="https://tronscan.org/#/transaction/927f2c2546757018916dc6a2c755cbad9cef0b01706d440fdcde3c2781bec8d3"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              TronScan 1 →
+            </a>
+            <a 
+              href="https://tronscan.org/#/transaction/3e8d1f3b74dd96b4e557cf57afbfc534575cf69996c4ccc80cd3fab5b9baa9e6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              TronScan 2 →
+            </a>
+            <a 
+              href="https://tronscan.org/#/transaction/e041d9461053bfa5c9ed5cd3e32b9a8517d7e6d569751eb5f1ad61bff7b4d46a"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              TronScan 3 →
+            </a>
           </div>
         </div>
       </div>
