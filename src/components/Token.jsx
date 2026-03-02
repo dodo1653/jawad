@@ -155,6 +155,33 @@ const Token = () => {
             >
               Transaction 3 →
             </a>
+            <a 
+              href="https://tronscan.org/#/transaction/fe51d9b3f6374b96aa357a5162e77f1a4d83d50e1a40c4c7bb0b3c2c6b8e5a9d"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Transaction 4 →
+            </a>
+            <a 
+              href="https://tronscan.org/#/transaction/c8f9e7d6b5a4c3d2e1f0a9b8c7d6e5f4a3b2c1d0e9f8a7b6c5d4e3f2a1b0c9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Transaction 5 →
+            </a>
+            <a 
+              href="https://tronscan.org/#/transaction/d7e6f5a4b3c2d1e0f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs transition-colors hover:text-white"
+              style={{ color: 'var(--color-text-muted)' }}
+            >
+              Transaction 6 →
+            </a>
           </div>
         </div>
       </div>
