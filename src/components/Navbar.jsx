@@ -59,10 +59,14 @@ const Navbar = () => {
           <a 
             href="#home" 
             onClick={(e) => handleClick(e, '#home')}
-            className="text-base font-medium tracking-tight transition-all duration-300 hover:opacity-80"
+            className="text-base font-medium tracking-tight transition-all duration-300 hover:opacity-80 flex items-center gap-2"
             style={{ color: 'var(--color-text-primary)' }}
           >
             $JAWAD
+            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 text-[10px] font-medium rounded-full" style={{ backgroundColor: 'rgba(34, 197, 94, 0.15)', color: '#22c55e' }}>
+              <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+              LIVE
+            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-1">

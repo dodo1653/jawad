@@ -177,7 +177,7 @@ const Support = () => {
           <p className="label mb-4">Connect</p>
           <div className="flex items-center gap-4">
             <a 
-              href="https://x.com/i/communities/2025543066569056377"
+              href="https://x.com/i/communities/2029479440712118537"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 border transition-all duration-300 hover:bg-white hover:text-black"
