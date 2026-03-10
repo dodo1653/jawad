@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 
 const Token = () => {
   const [visible, setVisible] = useState(false)
+  const [copied, setCopied] = useState(false)
   const ref = useRef(null)
 
   const CA = "Coming Soon"
@@ -21,62 +22,70 @@ const Token = () => {
     return () => observer.disconnect()
   }, [])
 
+  const copyCA = () => {
+    navigator.clipboard.writeText(CA)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+
   return (
-    <section ref={ref} id="token" className="py-20 md:py-28" style={{ backgroundColor: 'var(--color-terminal-surface)' }}>
+    <section ref={ref} id="token" className="py-24 md:py-32" style={{ backgroundColor: 'var(--color-terminal-surface)' }}>
       <div className="terminal-container">
         <div 
-          className="transition-all duration-700 ease-out mb-12"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(15px)' : 'translateY(15px)' }}
+          className="transition-all duration-700 ease-out mb-10"
+          style={{ opacity: visible ? 1 : 0 }}
         >
-          <p className="label">// 02 — Token Info</p>
+          <p className="label">// TOKEN</p>
         </div>
 
-        <div className="max-w-2xl">
+        <div className="max-w-xl">
           <div 
             className="transition-all duration-700 ease-out delay-100"
-            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(15px)' : 'translateY(15px)' }}
+            style={{ opacity: visible ? 1 : 0 }}
           >
-            <h2 className="text-2xl sm:text-3xl font-medium mb-8">$JAWAD</h2>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6">$CORTISOL</h2>
           </div>
 
           <div 
             className="transition-all duration-700 ease-out delay-200"
-            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(15px)' : 'translateY(15px)' }}
+            style={{ opacity: visible ? 1 : 0 }}
           >
-            <div className="mb-4">
+            <div className="p-5 border mb-6" style={{ borderColor: 'rgba(13, 148, 136, 0.2)', backgroundColor: 'rgba(13, 148, 136, 0.05)' }}>
               <p className="label mb-2">Contract Address</p>
-              <div className="flex items-center gap-4">
-                <p className="text-sm" style={{ color: 'var(--color-text-muted)' }}>Coming Soon</p>
+              <div className="flex items-center gap-3">
+                <p className="text-sm font-mono" style={{ color: 'rgba(255,255,255,0.7)' }}>{CA}</p>
+                <button 
+                  onClick={copyCA}
+                  className="text-xs px-2 py-1 transition-colors"
+                  style={{ border: '1px solid rgba(13, 148, 136, 0.3)', borderRadius: '2px', color: '#14b8a6' }}
+                >
+                  {copied ? 'COPIED' : 'COPY'}
+                </button>
               </div>
             </div>
           </div>
 
-          <div 
-            className="divider my-6 transition-all duration-700 ease-out delay-200"
-            style={{ opacity: visible ? 1 : 0 }}
-          />
+          <div className="divider my-8" style={{ opacity: visible ? 1 : 0 }} />
 
           <div 
-            className="transition-all duration-700 ease-out delay-300"
-            style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(15px)' : 'translateY(15px)' }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 transition-all duration-700 ease-out delay-300"
+            style={{ opacity: visible ? 1 : 0 }}
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div>
-                <p className="label mb-1">Network</p>
-                <p className="text-sm">Solana</p>
-              </div>
-              <div>
-                <p className="label mb-1">Type</p>
-                <p className="text-sm">SPL Token</p>
-              </div>
-              <div>
-                <p className="label mb-1">Status</p>
-                <p className="text-sm">Coming Soon</p>
-              </div>
-              <div>
-                <p className="label mb-1">Purpose</p>
-                <p className="text-sm">Awareness</p>
-              </div>
+            <div className="p-4 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+              <p className="label mb-1">Supply</p>
+              <p className="font-medium">1B</p>
+            </div>
+            <div className="p-4 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+              <p className="label mb-1">Network</p>
+              <p className="font-medium">Solana</p>
+            </div>
+            <div className="p-4 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+              <p className="label mb-1">Launch</p>
+              <p className="font-medium">TBA</p>
+            </div>
+            <div className="p-4 border" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+              <p className="label mb-1">Tax</p>
+              <p className="font-medium">0/0</p>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
       
-      const sections = ['home', 'story', 'token', 'why', 'support', 'community', 'join']
+      const sections = ['home', 'token', 'about', 'community']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -29,11 +29,9 @@ const Navbar = () => {
   }, [])
 
   const navLinks = [
-    { href: '#story', label: 'Story' },
     { href: '#token', label: 'Token' },
-    { href: '#why', label: 'Why' },
-    { href: '#support', label: 'Support' },
-    { href: '#join', label: 'Join' },
+    { href: '#about', label: 'About' },
+    { href: '#community', label: 'Community' },
   ]
 
   const handleClick = (e, href) => {
@@ -49,52 +47,41 @@ const Navbar = () => {
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
-        backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.85)' : 'transparent',
+        backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.9)' : 'transparent',
         backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: 'none',
       }}
     >
       <div className="terminal-container">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-20">
           <a 
             href="#home" 
             onClick={(e) => handleClick(e, '#home')}
-            className="text-base font-medium tracking-tight transition-all duration-300 hover:opacity-80"
-            style={{ color: 'var(--color-text-primary)' }}
+            className="text-xl font-semibold tracking-tight transition-colors duration-300"
+            style={{ color: '#ffffff' }}
           >
-            $JAWAD
+            $CORTISOL
           </a>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
-                className="relative px-4 py-2 text-sm transition-all duration-300 group"
-                style={{ color: activeSection === link.href.slice(1) ? 'var(--color-text-primary)' : 'var(--color-text-muted)' }}
+                className="text-sm transition-colors duration-300"
+                style={{ 
+                  color: activeSection === link.href.slice(1) ? '#14b8a6' : 'rgba(255,255,255,0.5)',
+                }}
               >
                 {link.label}
-                <span 
-                  className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300"
-                  style={{ 
-                    backgroundColor: 'var(--color-text-primary)',
-                    opacity: activeSection === link.href.slice(1) ? 1 : 0,
-                    transform: activeSection === link.href.slice(1) ? 'scale(1)' : 'scale(0)'
-                  }}
-                />
-                <span 
-                  className="absolute inset-0 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: 'rgba(255, 255, 255, 0.04)' }}
-                />
               </a>
             ))}
           </div>
 
           <button
-            className="md:hidden p-2 transition-colors duration-300"
+            className="md:hidden p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-            style={{ color: 'var(--color-text-secondary)' }}
+            style={{ color: '#ffffff' }}
           >
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
               {menuOpen ? (
@@ -107,23 +94,14 @@ const Navbar = () => {
         </div>
 
         {menuOpen && (
-          <div 
-            className="md:hidden py-4 border-t animate-fade-in"
-            style={{ 
-              borderColor: 'rgba(255, 255, 255, 0.06)',
-              animation: 'fadeIn 0.3s ease-out'
-            }}
-          >
-            {navLinks.map((link, index) => (
+          <div className="md:hidden py-4 border-t" style={{ borderColor: 'rgba(255,255,255,0.08)' }}>
+            {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleClick(e, link.href)}
-                className="block py-3 text-sm transition-colors duration-300"
-                style={{ 
-                  color: activeSection === link.href.slice(1) ? 'var(--color-text-primary)' : 'var(--color-text-muted)',
-                  animation: `slideIn 0.3s ease-out ${index * 0.05}s both`
-                }}
+                className="block py-3 text-sm"
+                style={{ color: 'rgba(255,255,255,0.6)' }}
               >
                 {link.label}
               </a>
